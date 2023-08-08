@@ -40,17 +40,17 @@ To get this project setup, you should:
 
 ## Standard Requirements
 
-- [ ] Setup eslint
-- [ ] Pass all linting checks
+- [x] Setup eslint
+- [x] Pass all linting checks
 
 - To check if linting passes, run `npm run lint`
 
-- [ ] Format code with prettier
-- [ ] State should not be duplicated
-- [ ] Variables should be named logically
-- [ ] No unnecessary console logs
-- [ ] No commented out blocks of code (Code comments are fine)
-- [ ] Setup a github repository with your submission as the `main` branch, you will submit a link to this for grading (NOT A ZIP FILE)
+- [x] Format code with prettier
+- [x] State should not be duplicated
+- [x] Variables should be named logically
+- [x] No unnecessary console logs
+- [x] No commented out blocks of code (Code comments are fine)
+- [x] Setup a github repository with your submission as the `main` branch, you will submit a link to this for grading (NOT A ZIP FILE)
 
 ## Typescript Specific Requirements
 
@@ -78,7 +78,7 @@ Note: It's not a perfect mapping to what you're going to build, below highlights
 
 ## Showing the Correct Component
 
-- [ ] place `FunctionalDogs` inside of the `.content-container` div of the `FunctionalSection` component **using React Children**
+- [x] place `FunctionalDogs` inside of the `.content-container` div of the `FunctionalSection` component **using React Children**
 - [ ] place `FunctionalCreateDogForm` inside of the `.content-container` div of the `FunctionalSection` component **using React Children**
 - [ ] place `ClassDogs` inside of the `.content-container` div of the `ClassSection` component **using React Children**
 - [ ] place `ClassCreateDogForm` inside of the `.content-container` div of the `ClassSection` component **using React Children**
@@ -125,13 +125,13 @@ You should use conditional rendering to show different components inside of the 
 
 ## Organizing your fetch calls
 
-- [ ] You should have a file called `api.ts` with a request object that contains all of your fetching functions
-- [ ] These can and should be shared to both your class components and your functional components as needed
-- [ ] `getAllDogs` should return a promise that resolves to an array of all the dogs in the database
-- [ ] `postDog` should take in a partial dog object, and return a promise that resolves to the dog object that was created
+- [x] You should have a file called `api.ts` with a request object that contains all of your fetching functions
+- [x] These can and should be shared to both your class components and your functional components as needed
+- [x] `getAllDogs` should return a promise that resolves to an array of all the dogs in the database
+- [x] `postDog` should take in a partial dog object, and return a promise that resolves to the dog object that was created
   - Note: Don't provide an id with the body of your request, the server will create an id for you
-- [ ] `updateDog` should take in a partial dog object, and return a promise that resolves to the dog object that was modified
-- [ ] `delete` should take in a number, delete the dog with that id, and return a promise
+- [x] `updateDog` should take in a partial dog object, and return a promise that resolves to the dog object that was modified
+- [x] `delete` should take in a number, delete the dog with that id, and return a promise
 
 - We STRONGLY recommend you TEST these functions before you stress out about actually using them
 - For example, MAKE SURE `getAllDogs` works before trying to use it in your components to render things on the page

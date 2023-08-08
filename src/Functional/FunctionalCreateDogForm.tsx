@@ -1,9 +1,18 @@
 import { dogPictures } from "../dog-pictures";
 
+type DogProps = {
+  addDog: Object,
+  
+}
+
+
 // use this as your default selected image
 const defaultSelectedImage = dogPictures.BlueHeeler;
 
-export const FunctionalCreateDogForm = () => {
+export const FunctionalCreateDogForm = (props: DogProps) => {
+
+
+  const { addDog } = props;
   return (
     <form
       action=""
