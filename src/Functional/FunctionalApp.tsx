@@ -3,30 +3,30 @@ import { FunctionalCreateDogForm } from "./FunctionalCreateDogForm";
 import { FunctionalDogs } from "./FunctionalDogs";
 import { FunctionalSection } from "./FunctionalSection";
 import { Requests } from "../api";
-
-export type Dog = {
-  name: string;
-  description: string;
-  image: HTMLImageElement;
-  isFavorite: boolean;
-  dogId: number;
-};
+import { Dog } from "../types";
 
 export function FunctionalApp() {
   const [mode, setMode] = useState("all");
-  const [dogs, setDogs] = useState<Dog[] | []>([]);
+  const [dogs, setDogs] = useState<Dog[]>([]);
+
 
   const refetchDogs = () => {
-    Requests.getAllDogs().then(setDogs);
+    Requests.getAllDogs().then((res) =>{
+      setDogs(res)
+    });
   };
+
+  useEffect(() => {
+    refetchDogs();
+  }, []);
+
 
   const addDog = (dog: Dog) => {
     Requests.postDog({
       name: dog.name,
       description: dog.description,
       image: dog.image,
-      isFavorite: dog.isFavorite,
-      dogId: dog.dogId,
+      isFavorite: false,
     }).then(() => refetchDogs());
   };
 
@@ -59,30 +59,32 @@ export function FunctionalApp() {
     setMode(dogMode);
   };
 
-  useEffect(() => {
-    refetchDogs();
-  }, []);
+  let filteredDogs = (() => {
+    if (mode === "favorited") {
+      return favorited;
+    }
 
+    if (mode === "unfavorited") {
+      return unfavorited;
+    }
+    return dogs;
+  })();
 
-  const dogsData = {
-    all: dogs,
-    favorite: favorited,
-    unfavorite: unfavorited,
-  }
   return (
     <div className="App" style={{ backgroundColor: "skyblue" }}>
       <header>
         <h1>pup-e-picker (Functional)</h1>
       </header>
+
       <FunctionalSection
         favoriteDogCount={favoriteDogCount}
         unfavoriteDogCount={unfavoriteDogCount}
         mode={mode}
         handleOnClick={handleOnClick}
       >
-        {mode !== "create" && (
+        {["all", "favorited", "unfavorited"].includes(mode) && (
           <FunctionalDogs
-            dogsList= {dogsData[mode]}
+            filteredDogs = {filteredDogs}
             deleteDog={deleteDog}
             favoriteDog={favoriteDog}
             unfavoriteDog={unfavoriteDog}

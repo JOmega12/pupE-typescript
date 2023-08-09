@@ -1,13 +1,6 @@
-export const baseUrl = "http://localhost:3000";
+import { Dog } from "./types";
 
-type DogProps = {
-  name: string,
-  description: string,
-  image: HTMLImageElement,
-  isFavorite: boolean, 
-  dogId: number,
-}
-
+export const baseUrl = "http://localhost:3000/dogs";
 
 export const Requests = {
   // should return a promise with all dogs in the database
@@ -18,7 +11,7 @@ export const Requests = {
  },
   // should create a dog in the database from a partial dog object
   // and return a promise with the result
-  postDog: (props: DogProps) => {
+  postDog: (props: Dog) => {
     const { name, description, isFavorite, image  } = props
     const body = JSON.stringify({ name, description, isFavorite, image });
   
@@ -32,15 +25,14 @@ export const Requests = {
   },
 
   // should delete a dog from the database
-  deleteDog: (props: DogProps) => {
-    return fetch(`http://localhost:3000/dogs/${props.dogId}`, {
+  deleteDog: (dogId: Dog) => {
+    return fetch(`http://localhost:3000/dogs/${dogId.dogId}`, {
       method: "delete",
     });
   },
 
-  updateDog: (props: DogProps) => {
-
-    const { dogId, isFavorite } = props;
+  updateDog: (dog: Dog) => {
+    const { dogId, isFavorite } = dog;
     return fetch(`http://localhost:3000/dogs/${dogId}`, {
       headers: {
         "Content-Type": "application/json",
