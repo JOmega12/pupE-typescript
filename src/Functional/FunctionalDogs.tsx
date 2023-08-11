@@ -4,7 +4,7 @@ import { DogCardProps } from "../types";
 
 export const FunctionalDogs = (props: DogCardProps) => {
 
-  const { filteredDogs, deleteDog, favoriteTypeDog, } = props
+  const { filteredDogs, deleteDog, favoriteTypeDog, isLoading} = props
 
   return (
     //  the "<> </>"" are called react fragments, it's like adding all the html inside
@@ -25,7 +25,7 @@ export const FunctionalDogs = (props: DogCardProps) => {
       onEmptyHeartClick={() => {
         favoriteTypeDog(dog);
       }}
-      isLoading={false}
+      isLoading={isLoading}
       />
     )}
     )}

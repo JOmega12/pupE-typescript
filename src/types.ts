@@ -7,7 +7,6 @@ export type Dog = {
    id?: number;
  };
 
-
 export type DogCardProps
  = {
   deleteDog: (dogId: Dog) => void,
@@ -15,3 +14,8 @@ export type DogCardProps
   filteredDogs: Dog[],
   isLoading: boolean,
  }
+
+export type CreateDogProps = {
+  addDog: (dog: Dog) => void,
+  isLoading: boolean,
+}
