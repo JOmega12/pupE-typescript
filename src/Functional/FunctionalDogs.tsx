@@ -1,18 +1,10 @@
 import { DogCard } from "../Shared/DogCard";
-import { Dog } from "../types";
+import { DogCardProps } from "../types";
 
-
-type DogCardProps
- = {
-  deleteDog: (dogId: Dog) => void,
-  favoriteDog: (dogId: Dog) => void,
-  unfavoriteDog: (dogId: Dog) => void,
-  filteredDogs: Dog[],
- }
 
 export const FunctionalDogs = (props: DogCardProps) => {
 
-  const { filteredDogs, deleteDog, favoriteDog, unfavoriteDog } = props
+  const { filteredDogs, deleteDog, favoriteTypeDog, } = props
 
   return (
     //  the "<> </>"" are called react fragments, it's like adding all the html inside
@@ -28,10 +20,10 @@ export const FunctionalDogs = (props: DogCardProps) => {
         deleteDog(dog)
       }}
       onHeartClick={() => {
-        unfavoriteDog(dog);
+        favoriteTypeDog(dog);
       }}
       onEmptyHeartClick={() => {
-        favoriteDog(dog);
+        favoriteTypeDog(dog);
       }}
       isLoading={false}
       />

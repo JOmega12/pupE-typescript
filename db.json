@@ -1,81 +1,137 @@
 {
   "dogs": [
     {
-      "name": "Tillman",
-      "image": "/assets/dalmation.png",
-      "description": "Classical SUV Diesel bungle purple East vapid",
-      "isFavorite": true,
+      "name": "Candido",
+      "image": "/assets/boxer.png",
+      "description": "Bacon Convertible backing Southeast Cab shakily dicta",
+      "isFavorite": false,
       "id": 0
     },
     {
-      "name": "Estefania",
-      "image": "/assets/blue-heeler.png",
-      "description": "evenly Bicycle male armor Officer Hybrid Fish",
-      "isFavorite": true,
-      "id": 1
-    },
-    {
-      "name": "Zackery",
-      "image": "/assets/blue-heeler.png",
-      "description": "Hybrid Bedfordshire Investment Diesel navigating program Sweden",
-      "isFavorite": true,
+      "name": "Berniece",
+      "image": "/assets/corgi.png",
+      "description": "vel Diesel ASCII Electric Bicycle gold Gasoline",
+      "isFavorite": false,
       "id": 2
     },
     {
-      "name": "Keaton",
-      "image": "/assets/blue-heeler.png",
-      "description": "grow Wisconsin Virtual Latin Lamborghini Principal index scalable",
+      "name": "Leatha",
+      "image": "/assets/chihuahua.avif",
+      "description": "Soft Metal World for Trigender sapiente mint",
       "isFavorite": false,
       "id": 3
     },
     {
-      "name": "Gianni",
-      "image": "/assets/blue-heeler.png",
-      "description": "Operations value Fish West up",
+      "name": "Dayton",
+      "image": "/assets/chihuahua.avif",
+      "description": "Cambridgeshire Buckinghamshire aw Investment male Electronics Plastic",
       "isFavorite": true,
       "id": 4
     },
     {
-      "name": "Mariana",
-      "image": "/assets/boxer.png",
-      "description": "optical Home East Associate Samoa non online Visionary",
+      "name": "Easter",
+      "image": "/assets/corgi.png",
+      "description": "Toys silver Fantastic psst pink analyzer Blues",
+      "isFavorite": false,
+      "id": 5
+    },
+    {
+      "name": "Mathew",
+      "image": "/assets/blue-heeler.png",
+      "description": "astride less Fantastic Hryvnia Designer Berkshire support",
       "isFavorite": true,
+      "id": 6
+    },
+    {
+      "name": "Rasheed",
+      "image": "/assets/chihuahua.avif",
+      "description": "Utah Carbon Southwest teal Synergistic Metal Palestine",
+      "isFavorite": true,
+      "id": 7
+    },
+    {
+      "name": "Elyse",
+      "image": "/assets/chihuahua.avif",
+      "description": "Polestar fortunately pro harum Central West compress Rial",
+      "isFavorite": false,
+      "id": 8
+    },
+    {
+      "name": "Sandra",
+      "image": "/assets/dalmation.png",
+      "description": "Agent transmitting HDD Hassium female Practical Ringgit West",
+      "isFavorite": false,
+      "id": 9
+    },
+    {
+      "name": "Harmony",
+      "image": "/assets/corgi.png",
+      "description": "Licensed um knottily Soap male Research yesterday gulp",
+      "isFavorite": false,
+      "id": 10
+    },
+    {
+      "name": "Vada",
+      "image": "/assets/corgi.png",
+      "description": "verify East Generic Rustic Concrete Southeast Dollar Southwest",
+      "isFavorite": false,
+      "id": 11
+    },
+    {
+      "name": "Oren",
+      "image": "/assets/chihuahua.avif",
+      "description": "Account Heights Liaison productize Plastic Borders Mazda Metal",
+      "isFavorite": false,
+      "id": 12
+    },
+    {
+      "name": "Jakayla",
+      "image": "/assets/cowardly.png",
+      "description": "Burundi Computer ADP Dinar embrace hack Forest",
+      "isFavorite": false,
+      "id": 13
+    },
+    {
+      "name": "Vernon",
+      "image": "/assets/boxer.png",
+      "description": "South synergize Cambridgeshire District Algeria",
+      "isFavorite": false,
       "id": 14
     },
     {
-      "name": "Tia",
-      "image": "/assets/boxer.png",
-      "description": "infantile why Bacon bypass joule",
-      "isFavorite": true,
+      "name": "Catalina",
+      "image": "/assets/dalmation.png",
+      "description": "North Wagon usefully technologies Cis maximize lavender",
+      "isFavorite": false,
       "id": 15
     },
     {
-      "name": "Cedrick",
-      "image": "/assets/blue-heeler.png",
-      "description": "Pants Alabama Magnesium laboriosam generating",
+      "name": "Madalyn",
+      "image": "/assets/dalmation.png",
+      "description": "whose South material following Tantalum Ferrari Funk Berkshire",
+      "isFavorite": true,
+      "id": 16
+    },
+    {
+      "name": "Jerod",
+      "image": "/assets/corgi.png",
+      "description": "East while Baby Borders quaerat Belize FTM along",
       "isFavorite": true,
       "id": 17
     },
     {
-      "name": "Payton",
-      "image": "/assets/blue-heeler.png",
-      "description": "Gasoline Jazz male Aston Reggae East Electric firm",
-      "isFavorite": true,
+      "name": "Alycia",
+      "image": "/assets/boxer.png",
+      "description": "synthesize Expressway Australia morph Graphic Romania Hybrid",
+      "isFavorite": false,
       "id": 18
     },
     {
-      "name": "Anibal",
-      "image": "/assets/corgi.png",
-      "description": "Buckinghamshire Berkshire rudely Future Lithium Bike olive",
+      "name": "Rylan",
+      "image": "/assets/blue-heeler.png",
+      "description": "woman HEX strategy furthermore calculate Implementation Outdoors",
       "isFavorite": true,
       "id": 19
-    },
-    {
-      "name": "asd",
-      "description": "aDSSADF",
-      "image": "/assets/chihuahua.avif",
-      "id": 20,
-      "isFavorite": true
     }
   ]
 }

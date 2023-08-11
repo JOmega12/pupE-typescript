@@ -4,6 +4,7 @@ import { Dog } from "../types";
 
 type DogProps = {
   addDog: (dog: Dog) => void,
+  isLoading: boolean,
 }
 
 

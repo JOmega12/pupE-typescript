@@ -6,3 +6,12 @@ export type Dog = {
    isFavorite: boolean;
    id?: number;
  };
+
+
+export type DogCardProps
+ = {
+  deleteDog: (dogId: Dog) => void,
+  favoriteTypeDog: (dogId: Dog) => void,
+  filteredDogs: Dog[],
+  isLoading: boolean,
+ }

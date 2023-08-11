@@ -4,16 +4,21 @@ import { FunctionalDogs } from "./FunctionalDogs";
 import { FunctionalSection } from "./FunctionalSection";
 import { Requests } from "../api";
 import { Dog } from "../types";
+import { toast } from "react-hot-toast";
 
 export function FunctionalApp() {
   const [mode, setMode] = useState("all");
   const [dogs, setDogs] = useState<Dog[]>([]);
 
+  const [isLoading, setIsLoading] = useState(false);
 
   const refetchDogs = () => {
-    Requests.getAllDogs().then((res) =>{
-      setDogs(res)
-    });
+    setIsLoading(true);
+    Requests.getAllDogs()
+      .then((res) =>{
+        setDogs(res)
+      })
+      .finally(() => setIsLoading(false));
   };
 
   useEffect(() => {
@@ -22,28 +27,43 @@ export function FunctionalApp() {
 
 
   const addDog = (dog: Dog) => {
+    setIsLoading(true);
     Requests.postDog({
       name: dog.name,
       description: dog.description,
       image: dog.image,
       isFavorite: false,
-    }).then(() => refetchDogs());
+    }).then(() => refetchDogs())
+    .then(() => {
+      toast.success(`You've created a dog!`)
+    })
+    .finally(() => setIsLoading(false));
   };
 
   const deleteDog = (dog: Dog) => {
-    // console.log('deleted', dogId)
+    setIsLoading(true);
     Requests.deleteDog(dog).then(() => {
       return refetchDogs();
-    });
+    })
+    .then(() => {
+      toast.success(`You've deleted a good boi :(`)
+    })
+    .finally(() => setIsLoading(false));
   };
 
-  const favoriteDog = (dog: Dog) => {
-    Requests.updateDog(dog).then(() => refetchDogs());
+  const favoriteTypeDog = (dog: Dog) => {
+    setIsLoading(true);
+    Requests.updateDog(dog).then(() => refetchDogs())
+    .then(() => {
+      if(dog.isFavorite === false) {
+        toast.success(`You've favorited a good boi`)
+      } else {
+        toast.success(`You've unfavorited a good boi`)
+      }
+    })
+    .finally(() => setIsLoading(false));
   };
 
-  const unfavoriteDog = (dog: Dog) => {
-    Requests.updateDog(dog).then(() => refetchDogs());
-  };
 
   const favorited = dogs.filter((dog) => dog.isFavorite === true);
   const unfavorited = dogs.filter((dog) => dog.isFavorite === false);
@@ -87,11 +107,13 @@ export function FunctionalApp() {
           <FunctionalDogs
             filteredDogs = {filteredDogs}
             deleteDog={deleteDog}
-            favoriteDog={favoriteDog}
-            unfavoriteDog={unfavoriteDog}
+            favoriteTypeDog={favoriteTypeDog}
+            isLoading={isLoading}
           />
         )}
-        {mode === "create" && <FunctionalCreateDogForm addDog={addDog} />}
+        {mode === "create" && <FunctionalCreateDogForm addDog={addDog}
+        isLoading={isLoading}
+        />}
       </FunctionalSection>
     </div>
   );

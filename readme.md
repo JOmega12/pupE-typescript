@@ -54,14 +54,14 @@ To get this project setup, you should:
 
 ## Typescript Specific Requirements
 
-- [ ] pass **ALL** type checks
+- [x] pass **ALL** type checks
   - Check by running `npm run typecheck`
-- [ ] DON'T USE `any`.... OR ELSE
-- [ ] Keep your types clean and in a logical location
-- [ ] Prop Types for components should be collocated with their components
-- [ ] Shared types should live in a file that says `types` somewhere in it's name
-  - [ ] example: `types.ts` should work fine
-- [ ] Unshared types should live in the component they are used in
+- [x] DON'T USE `any`.... OR ELSE
+- [x] Keep your types clean and in a logical location
+- [x] Prop Types for components should be collocated with their components
+- [x] Shared types should live in a file that says `types` somewhere in it's name
+  - [x] example: `types.ts` should work fine
+- [x] Unshared types should live in the component they are used in
 
 ## Example Of Correct Code
 
@@ -79,7 +79,7 @@ Note: It's not a perfect mapping to what you're going to build, below highlights
 ## Showing the Correct Component
 
 - [x] place `FunctionalDogs` inside of the `.content-container` div of the `FunctionalSection` component **using React Children**
-- [ ] place `FunctionalCreateDogForm` inside of the `.content-container` div of the `FunctionalSection` component **using React Children**
+- [] place `FunctionalCreateDogForm` inside of the `.content-container` div of the `FunctionalSection` component **using React Children**
 - [ ] place `ClassDogs` inside of the `.content-container` div of the `ClassSection` component **using React Children**
 - [ ] place `ClassCreateDogForm` inside of the `.content-container` div of the `ClassSection` component **using React Children**
 
@@ -110,10 +110,10 @@ You should use conditional rendering to show different components inside of the 
 ### Tabs
 
 - [ ] Should be black when active (You can add the `active` class to it to style an active tab correctly)
-- [ ] Should be white when inactive
-- [ ] Only zero - one tab should be active at a time
-- [ ] Clicking on a tab should make it active and make all other tabs inactive
-- [ ] Clicking an Active Tab should make it inactive
+- [x] Should be white when inactive
+- [x] Only zero - one tab should be active at a time
+- [x] Clicking on a tab should make it active and make all other tabs inactive
+- [x] Clicking an Active Tab should make it inactive
 
 ## Interacting With the API
 
