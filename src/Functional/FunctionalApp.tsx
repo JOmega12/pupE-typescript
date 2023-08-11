@@ -30,18 +30,19 @@ export function FunctionalApp() {
     }).then(() => refetchDogs());
   };
 
-  const deleteDog = (dogId: Dog) => {
-    Requests.deleteDog(dogId).then(() => {
+  const deleteDog = (dog: Dog) => {
+    // console.log('deleted', dogId)
+    Requests.deleteDog(dog).then(() => {
       return refetchDogs();
     });
   };
 
-  const favoriteDog = (dogId: Dog) => {
-    Requests.updateDog(dogId).then(() => refetchDogs());
+  const favoriteDog = (dog: Dog) => {
+    Requests.updateDog(dog).then(() => refetchDogs());
   };
 
-  const unfavoriteDog = (dogId: Dog) => {
-    Requests.deleteDog(dogId).then(() => refetchDogs());
+  const unfavoriteDog = (dog: Dog) => {
+    Requests.updateDog(dog).then(() => refetchDogs());
   };
 
   const favorited = dogs.filter((dog) => dog.isFavorite === true);
@@ -82,7 +83,7 @@ export function FunctionalApp() {
         mode={mode}
         handleOnClick={handleOnClick}
       >
-        {["all", "favorited", "unfavorited"].includes(mode) && (
+        {mode !== 'create' && (
           <FunctionalDogs
             filteredDogs = {filteredDogs}
             deleteDog={deleteDog}

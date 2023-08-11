@@ -15,7 +15,7 @@ export const Requests = {
     const { name, description, isFavorite, image  } = props
     const body = JSON.stringify({ name, description, isFavorite, image });
   
-    return fetch("http://localhost:3000/dogs", {
+    return fetch(`${baseUrl}`, {
       method: "POST",
       headers: {
         ["Content-Type"]: "application/json",
@@ -25,21 +25,22 @@ export const Requests = {
   },
 
   // should delete a dog from the database
-  deleteDog: (dogId: Dog) => {
-    return fetch(`http://localhost:3000/dogs/${dogId.dogId}`, {
+  deleteDog: (dog: Dog) => {
+
+    return fetch(`${baseUrl}/${dog.id}`, {
       method: "delete",
     });
   },
 
   updateDog: (dog: Dog) => {
-    const { dogId, isFavorite } = dog;
-    return fetch(`http://localhost:3000/dogs/${dogId}`, {
+    const { isFavorite } = dog;
+    return fetch(`${baseUrl}/${dog.id}`, {
       headers: {
         "Content-Type": "application/json",
       },
       method: "PATCH",
       body: JSON.stringify({
-        isFavorite,
+        isFavorite: !isFavorite,
       }),
     });
   },

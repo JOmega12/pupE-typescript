@@ -36,73 +36,10 @@
       "id": 4
     },
     {
-      "name": "Jamir",
-      "image": "/assets/chihuahua.avif",
-      "description": "Division Web Yemen female morph synthesize Southwest",
-      "isFavorite": true,
-      "id": 5
-    },
-    {
-      "name": "Cara",
-      "image": "/assets/chihuahua.avif",
-      "description": "Southwest distributed Hybrid calculating National abaft transmit Ford",
-      "isFavorite": true,
-      "id": 6
-    },
-    {
-      "name": "Glen",
-      "image": "/assets/corgi.png",
-      "description": "male Northeast Customer Consultant Birr female Producer",
-      "isFavorite": true,
-      "id": 7
-    },
-    {
-      "name": "Eloise",
-      "image": "/assets/dalmation.png",
-      "description": "grey black redundant Designer Bespoke orange Danish",
-      "isFavorite": true,
-      "id": 8
-    },
-    {
-      "name": "Dee",
-      "image": "/assets/boxer.png",
-      "description": "simplistic separately Tasty Centralized productize",
-      "isFavorite": false,
-      "id": 9
-    },
-    {
-      "name": "Yolanda",
-      "image": "/assets/corgi.png",
-      "description": "Rutherfordium er Data that tan",
-      "isFavorite": true,
-      "id": 10
-    },
-    {
-      "name": "Amalia",
-      "image": "/assets/blue-heeler.png",
-      "description": "Handcrafted Krona navigate Implementation Dirham Organized grey Southwest",
-      "isFavorite": false,
-      "id": 11
-    },
-    {
-      "name": "Lolita",
-      "image": "/assets/corgi.png",
-      "description": "Granite Towels Touring virtual lime Chair transmitting",
-      "isFavorite": false,
-      "id": 12
-    },
-    {
-      "name": "Kasandra",
-      "image": "/assets/cowardly.png",
-      "description": "Virtual green Visionary Ford haptic Northwest Wooden jealously",
-      "isFavorite": true,
-      "id": 13
-    },
-    {
       "name": "Mariana",
       "image": "/assets/boxer.png",
       "description": "optical Home East Associate Samoa non online Visionary",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 14
     },
     {
@@ -111,13 +48,6 @@
       "description": "infantile why Bacon bypass joule",
       "isFavorite": true,
       "id": 15
-    },
-    {
-      "name": "Buster",
-      "image": "/assets/boxer.png",
-      "description": "Money Square capacitor Borders Coupe sheepishly strategy",
-      "isFavorite": true,
-      "id": 16
     },
     {
       "name": "Cedrick",
@@ -144,20 +74,8 @@
       "name": "asd",
       "description": "aDSSADF",
       "image": "/assets/chihuahua.avif",
-      "id": 20
-    },
-    {
-      "name": "asdf",
-      "description": "asdf",
-      "image": "/assets/dalmation.png",
-      "id": 21
-    },
-    {
-      "name": "asdf",
-      "description": "asdf",
-      "isFavorite": false,
-      "image": "/assets/blue-heeler.png",
-      "id": 22
+      "id": 20,
+      "isFavorite": true
     }
   ]
 }

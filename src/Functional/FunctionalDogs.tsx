@@ -1,7 +1,4 @@
 import { DogCard } from "../Shared/DogCard";
-import { Requests } from "../api";
-import { dogPictures } from "../dog-pictures";
-// import { Dog } from "./FunctionalApp";
 import { Dog } from "../types";
 
 
@@ -13,34 +10,32 @@ type DogCardProps
   filteredDogs: Dog[],
  }
 
-// Right now these dogs are constant, but in reality we should be getting these from our server
 export const FunctionalDogs = (props: DogCardProps) => {
 
-  const { filteredDogs } = props
+  const { filteredDogs, deleteDog, favoriteDog, unfavoriteDog } = props
+
   return (
     //  the "<> </>"" are called react fragments, it's like adding all the html inside
     // without adding an actual html element
     <>
+    {filteredDogs.map((dog) => {
+      return(
 
-    {filteredDogs.map((dog) => (
       <DogCard 
-      key={dog.dogId}
+      key={dog.id}
       dog={dog}
       onTrashIconClick={() => {
-        Requests.deleteDog(dog)
-        // alert("clicked trash");
+        deleteDog(dog)
       }}
       onHeartClick={() => {
-        Requests.updateDog(dog);
-        // alert("clicked heart");
+        unfavoriteDog(dog);
       }}
       onEmptyHeartClick={() => {
-        Requests.updateDog(dog);
-        // alert("clicked empty heart");
+        favoriteDog(dog);
       }}
       isLoading={false}
       />
-    ))}
+    )}
+    )}
     </>
-  );
-};
+)};
