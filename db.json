@@ -127,27 +127,6 @@
       "id": 19
     },
     {
-      "name": "asdf",
-      "description": "asdf",
-      "isFavorite": false,
-      "image": "/assets/blue-heeler.png",
-      "id": 20
-    },
-    {
-      "name": "asdf",
-      "description": "fsdf",
-      "isFavorite": false,
-      "image": "/assets/blue-heeler.png",
-      "id": 21
-    },
-    {
-      "name": "asdf",
-      "description": "asdf",
-      "isFavorite": false,
-      "image": "/assets/blue-heeler.png",
-      "id": 22
-    },
-    {
       "name": "test",
       "description": "toaster",
       "isFavorite": false,

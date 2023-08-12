@@ -15,7 +15,22 @@ export type DogCardProps
   isLoading: boolean,
  }
 
+ export type ChildrenProps = {
+  children: React.ReactNode,
+  favoriteDogCount: number,
+  unfavoriteDogCount: number,
+  mode: string,
+  handleOnClick: (mode: string) => void,
+}
+
+
 export type CreateDogProps = {
   addDog: (dog: Dog) => void,
+  isLoading: boolean,
+}
+
+export type ClassAppTypes = {
+  mode: string, 
+  dogs: Dog[],
   isLoading: boolean,
 }

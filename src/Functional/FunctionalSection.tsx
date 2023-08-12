@@ -1,15 +1,7 @@
 // you can use this type for react children if you so choose
 // import { ReactNode } from "react";
 import { Link } from "react-router-dom";
-
-type ChildrenProps = {
-  children: React.ReactNode,
-  favoriteDogCount: number,
-  unfavoriteDogCount: number,
-  mode: string,
-  handleOnClick: (mode: string) => void,
-}
-
+import { ChildrenProps } from "../types";
 
 export const FunctionalSection = (props: ChildrenProps) => {
 
