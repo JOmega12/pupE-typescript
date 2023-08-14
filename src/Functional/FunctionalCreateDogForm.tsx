@@ -50,7 +50,11 @@ export const FunctionalCreateDogForm = (props: CreateDogProps) => {
         onChange={(e) => setDescriptionInput(e.target.value)}
       ></textarea>
       <label htmlFor="picture">Select an Image</label>
-      <select id="" onChange={(e) => setSelectImage(e.target.value)} disabled={isLoading}>
+      <select
+        id=""
+        onChange={(e) => setSelectImage(e.target.value)}
+        disabled={isLoading}
+      >
         {Object.entries(dogPictures).map(([label, pictureValue]) => {
           return (
             <option value={pictureValue} key={pictureValue}>

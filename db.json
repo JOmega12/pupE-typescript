@@ -11,7 +11,7 @@
       "name": "Leatha",
       "image": "/assets/chihuahua.avif",
       "description": "Soft Metal World for Trigender sapiente mint",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 3
     },
     {
@@ -25,15 +25,8 @@
       "name": "Easter",
       "image": "/assets/corgi.png",
       "description": "Toys silver Fantastic psst pink analyzer Blues",
-      "isFavorite": false,
-      "id": 5
-    },
-    {
-      "name": "Mathew",
-      "image": "/assets/blue-heeler.png",
-      "description": "astride less Fantastic Hryvnia Designer Berkshire support",
       "isFavorite": true,
-      "id": 6
+      "id": 5
     },
     {
       "name": "Rasheed",
@@ -46,36 +39,29 @@
       "name": "Elyse",
       "image": "/assets/chihuahua.avif",
       "description": "Polestar fortunately pro harum Central West compress Rial",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 8
     },
     {
       "name": "Sandra",
       "image": "/assets/dalmation.png",
       "description": "Agent transmitting HDD Hassium female Practical Ringgit West",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 9
     },
     {
       "name": "Harmony",
       "image": "/assets/corgi.png",
       "description": "Licensed um knottily Soap male Research yesterday gulp",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 10
     },
     {
       "name": "Vada",
       "image": "/assets/corgi.png",
       "description": "verify East Generic Rustic Concrete Southeast Dollar Southwest",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 11
-    },
-    {
-      "name": "Oren",
-      "image": "/assets/chihuahua.avif",
-      "description": "Account Heights Liaison productize Plastic Borders Mazda Metal",
-      "isFavorite": false,
-      "id": 12
     },
     {
       "name": "Jakayla",
@@ -132,6 +118,13 @@
       "isFavorite": false,
       "image": "/assets/blue-heeler.png",
       "id": 23
+    },
+    {
+      "name": "test",
+      "description": "test",
+      "isFavorite": true,
+      "image": "/assets/blue-heeler.png",
+      "id": 24
     }
   ]
 }

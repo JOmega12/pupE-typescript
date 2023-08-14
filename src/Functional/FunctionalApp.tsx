@@ -15,8 +15,8 @@ export function FunctionalApp() {
   const refetchDogs = () => {
     setIsLoading(true);
     Requests.getAllDogs()
-      .then((res) =>{
-        setDogs(res)
+      .then((res) => {
+        setDogs(res);
       })
       .finally(() => setIsLoading(false));
   };
@@ -25,7 +25,6 @@ export function FunctionalApp() {
     refetchDogs();
   }, []);
 
-
   const addDog = (dog: Dog) => {
     setIsLoading(true);
     Requests.postDog({
@@ -33,37 +32,39 @@ export function FunctionalApp() {
       description: dog.description,
       image: dog.image,
       isFavorite: false,
-    }).then(() => refetchDogs())
-    .then(() => {
-      toast.success(`You've created a dog!`)
     })
-    .finally(() => setIsLoading(false));
+      .then(() => refetchDogs())
+      .then(() => {
+        toast.success(`You've created a dog!`);
+      })
+      .finally(() => setIsLoading(false));
   };
 
   const deleteDog = (dog: Dog) => {
     setIsLoading(true);
-    Requests.deleteDog(dog).then(() => {
-      return refetchDogs();
-    })
-    .then(() => {
-      toast.success(`You've deleted a good boi :(`)
-    })
-    .finally(() => setIsLoading(false));
+    Requests.deleteDog(dog)
+      .then(() => {
+        return refetchDogs();
+      })
+      .then(() => {
+        toast.success(`You've deleted a good boi :(`);
+      })
+      .finally(() => setIsLoading(false));
   };
 
   const favoriteTypeDog = (dog: Dog) => {
     setIsLoading(true);
-    Requests.updateDog(dog).then(() => refetchDogs())
-    .then(() => {
-      if(dog.isFavorite === false) {
-        toast.success(`You've favorited a good boi`)
-      } else {
-        toast.success(`You've unfavorited a good boi`)
-      }
-    })
-    .finally(() => setIsLoading(false));
+    Requests.updateDog(dog)
+      .then(() => refetchDogs())
+      .then(() => {
+        if (dog.isFavorite === false) {
+          toast.success(`You've favorited a good boi`);
+        } else {
+          toast.success(`You've unfavorited a good boi`);
+        }
+      })
+      .finally(() => setIsLoading(false));
   };
-
 
   const favorited = dogs.filter((dog) => dog.isFavorite === true);
   const unfavorited = dogs.filter((dog) => dog.isFavorite === false);
@@ -103,17 +104,17 @@ export function FunctionalApp() {
         mode={mode}
         handleOnClick={handleOnClick}
       >
-        {mode !== 'create' && (
+        {mode !== "create" && (
           <FunctionalDogs
-            filteredDogs = {filteredDogs}
+            filteredDogs={filteredDogs}
             deleteDog={deleteDog}
             favoriteTypeDog={favoriteTypeDog}
             isLoading={isLoading}
           />
         )}
-        {mode === "create" && <FunctionalCreateDogForm addDog={addDog}
-        isLoading={isLoading}
-        />}
+        {mode === "create" && (
+          <FunctionalCreateDogForm addDog={addDog} isLoading={isLoading} />
+        )}
       </FunctionalSection>
     </div>
   );
